@@ -39,6 +39,7 @@ public class UsersServlet extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		// 用户注册
 		if ("register".equals(action)) {
+			 System.out.println(userName+"  "+userPwd);
 			  user = dao.findUserName(userName);
 			if (user != null) {
 				req.setAttribute("errorMsg", "用户名已存在");
